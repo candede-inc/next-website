@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300;1,500&display=swap');
+
+/*********Elements selectors************/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:  'Montserrat', sans-serif;   
+}
+
+body {
+font-family:  'Montserrat', sans-serif;   
+/*    background: #141414;*/
+}
+
+a {
+    color: #ff385c;
+    text-decoration: none;
+}
+a:hover {
+    color: #ff8177;
+}
+
+li {
+     list-style: none
+}
+
+/*********Nav bar selectors************/
+
+.navbar {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 88px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo {
+    background: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0% , #ffb424 100%);
+    background-size: 100%;
+    -webkit-background-clip :text;
+    -moz-background-clip :text;
+    -webkit-text-fill-color: transperant;
+    -moz-text-fill-color: transperant;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.fa-gem {
+    margin-right: 0.5rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar__items {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 1rem;
+    height: 100%
+    
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 150px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background: #f77062;
+    color: #fff;
+}
+
+.button:hover {
+    background: #ff385c;
+    transition: all 1s ease;
+    color: aliceblue
+}
+
+.navbar__links:hover {
+    color: #f77062;
+    transition: all 1s ease;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+/*        max-width: 13px;*/
+        background: #000;
+        padding: 0;
+    }
+    
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -100px;;
+        opacity: 1;
+        transition: all 0.8s ease;
+        height: 5vh;
+        z-index: -1;
+         background: #131313;
+    }
+    
+    .navbar__menu.active {
+        background: #131313;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.8s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+    
+    #navbar__logo {
+        padding: 30px;
+    }
+    
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.8s ease-in-out;
+        background: #fff;
+    }
+    
+    .nav__item {
+        width: 100%;
+    }
+    
+    
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+        background: #000;
+    }
+    
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 21%);
+    }
+    
+    .navbar__btn {
+        padding-bottom: 2rem;
+        background: #000000;
+    }
+
+    
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+    
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+    
+    #mobile-menu.is-active ,bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #mobile-menu.is-active ,bar:nth-child(1) {
+        transform: translate(9px) rotate(60deg);
+    }
+    
+    #mobile-menu.is-active ,bar:nth-child(3) {
+        transform: translate(-9px) rotate(-60deg);
+    }
+}
+
+/*Hero Section css*/
+
+.main {
+    background: #141414;
+}
+
+.main__container {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 90vh;
+    background: #141414;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.main__content {
+    font-size: 1.8rem;
+    background: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb141 100%);
+    background-size: 100%;
+    -webkit-background-clip:text;
+    -moz-background-clip:text;    
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.main__content > h2 {
+    font-size: 2.6rem;
+    background: #ff8177;
+    background-image: linear-gradient(to top, #b721ff 0%, #21f4fd 100%);
+    background-size: 100%;
+    -webkit-background-clip:text;
+    -moz-background-clip:text;    
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.main__content > p {
+    margin: 0.3rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.main__btn {
+    font-size: 1rem;
+    background-image: linear-gradient(to top , #f77062 0%, #ffb141 100% );
+    border: none;
+    border-radius: 35px;
+    color:#fff;
+/*    display: none;*/
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.5s;
+    outline: none; 
+}
+
+.main__btn > a {
+    position: relative;
+    font-size: 1rem;
+    z-index: 2;
+    color: aliceblue
+}
+
+.main__btn::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #4837ff;
+    transition: all 0.5s;
+    border-radius: 4px;
+}
+
+.main__img--container > img {
+    margin: 100px 80px;
+    width: 450px;
+    text-align: center
+}
+
+/*Services section*/
+
+.services {
+    background: #141414;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.services h1 {
+    margin: 60px;
+   font-size: 2.6rem;
+    background: #ff8177;
+    background-image: linear-gradient(to top, #b721ff 0%, #21f4fd 100%);
+    background-size: 100%;
+    -webkit-background-clip:text;
+    -moz-background-clip:text;    
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.services__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto
+}
+
+.services__card {
+    margin:1rem;
+    height: 425px;
+    width: 300px;
+    border-radius: 55px;
+    background-image:linear-gradient(to bottom, rgba(0,0,0,0)0%, rgba(17,17,17,0.6) 100%) , url('https://qph.fs.quoracdn.net/main-qimg-4d248ca1fbaa6d7fbe1b6d6b480871fb');
+    background-size: cover;
+    position: relative;
+    color: aliceblue
+}
+
+/*
+
+.services__card:nth-child(2) {
+    margin:1rem;
+    height: 425px;
+    width: 300px;
+    border-radius: 4px;
+background-image: url('https://qph.fs.quoracdn.net/main-qimg-4d248ca1fbaa6d7fbe1b6d6b480871fb') width:100% height:100%;
+    background-image: url('https://cdn.dnaindia.com/sites/default/files/styles/full/public/2019/06/25/840601-shraddha-kapoor.jpg')
+    background-size: cover;
+    position: relative;
+    color: aliceblue
+}
+*/
+
+.services h2 {
+    position:absolute;
+    top: 350px;
+    left: 30px
+}
+
+.services__card p {
+    position: absolute;
+    top: 400px;
+    left: 30px
+}
+
+.services__card button {
+    color: aliceblue;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 32px;
+    background: #f77862;
+    position: absolute;
+    top: 440px;
+    left: 30px;
+    font-size: 1rem;
+    cursor: pointer
+}
+
+.services__card:hover {
+    transform: scale(1.075);
+    transition: 0.2s ease-in;
+    cursor:pointer
+    
+}
+
+  footer .footer-cols {
+    display: none;
+  }
